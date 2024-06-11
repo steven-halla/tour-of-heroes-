@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {HeroesComponent} from "../heroes/heroes.component";
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { MessagesComponent } from './messages/messages.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  // imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  imports: [
-    HeroesComponent
-  ],
-  styleUrl: './app.component.css'
+  standalone: true,
+  styleUrls: ['./app.component.css'],
+  imports: [RouterModule, CommonModule, MessagesComponent]
 })
 export class AppComponent {
-  title = 'Tour Of Heroes';
+  title = 'Tour of Heroes';
 }
